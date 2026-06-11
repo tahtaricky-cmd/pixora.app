@@ -310,9 +310,7 @@ export default function App() {
             ]
           }],
           generationConfig: {
-            role: 'user',
             responseModalities: ['IMAGE'],
-            imageConfig: { aspectRatio: aspectRatio }
           }
         };
 
@@ -391,14 +389,12 @@ export default function App() {
           contents: [{
             role: 'user',
             parts: [
-              { text: promptText },
+              { text: promptText + `\n\nPastikan rasio aspek desain promosi menggunakan: ${promoAspectRatio}` },
               { inlineData: { mimeType, data } }
             ]
           }],
           generationConfig: {
-            role: 'user',
             responseModalities: ['IMAGE'],
-            imageConfig: { aspectRatio: promoAspectRatio }
           }
         };
 
