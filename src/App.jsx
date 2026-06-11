@@ -303,7 +303,6 @@ export default function App() {
       const generationPromises = scenarios.map(async (scenario) => {
         const payload = {
           contents: [{
-            role: 'user',
             parts: [
               { text: `Create a professional high-quality product photo. Theme: ${themePrompt}. ${userDescPrompt} ${autoPropsInstruction} ${customPropsPrompt} Composition/Scenario: ${scenario}. ${realismConstraints} Ensure the main product is perfectly lit, clearly visible, and remains the absolute focus of the image. Generate in high resolution (1080px).` },
               ...referenceImages.map(img => ({ inlineData: { mimeType: img.mimeType, data: img.base64 } }))
@@ -388,7 +387,6 @@ export default function App() {
 
         const payload = {
           contents: [{
-            role: 'user',
             parts: [
               { text: promptText + `\n\nPastikan rasio aspek desain promosi menggunakan: ${promoAspectRatio}` },
               { inlineData: { mimeType, data } }
