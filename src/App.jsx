@@ -225,7 +225,8 @@ export default function App() {
         newImages.push({
           preview: reader,
           base64: reader.split(',')[1],
-          mimeType: file.type
+          mimeType: "image/jpeg",
+  data: photoData.includes(',') ? photoData.split(',')[1] : photoData
         });
       }
     }
