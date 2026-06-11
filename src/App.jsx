@@ -226,7 +226,7 @@ export default function App() {
           preview: reader,
           base64: reader.split(',')[1],
           mimeType: "image/jpeg",
-  data: photoData.includes(',') ? photoData.split(',')[1] : photoData
+          data: photoData.includes(',') ? photoData.split(',')[1] : photoData
         });
       }
     }
