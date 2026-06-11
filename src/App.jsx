@@ -311,6 +311,7 @@ export default function App() {
           }],
           generationConfig: {
             responseModalities: ['IMAGE'],
+            imageConfig: { aspectRatio: aspectRatio }
           }
         };
 
@@ -395,6 +396,7 @@ export default function App() {
           }],
           generationConfig: {
             responseModalities: ['IMAGE'],
+            imageConfig: { aspectRatio: promoAspectRatio }
           }
         };
 
